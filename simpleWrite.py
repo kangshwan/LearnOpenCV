@@ -15,16 +15,16 @@ def koreanPath( file_path ):
     numpyArray = numpy.asarray(bytes, dtype=numpy.uint8)
 
     #return cv2.imdecode(numpyArray, cv2.IMREAD_UNCHANGED)  """그대로 읽기"""
-    #return cv2.imdecode(numpyArray, cv2.IMREAD_GRAYSCALE)   #회색으로 읽어오기
-    return cv2.imdecode(numpyArray, cv2.IMREAD_COLOR)   #컬러스케일로 읽어오기
+    return cv2.imdecode(numpyArray, cv2.IMREAD_GRAYSCALE)   #회색으로 읽어오기
+    #return cv2.imdecode(numpyArray, cv2.IMREAD_COLOR)   #컬러스케일로 읽어오기
 
 
 img_file = "C:\\Users\\rnltl\\Desktop\\VISUALCODE\\openCV\\picachu.jpg"
+
+save_file = "C:\\Users\\rnltl\\Desktop\\VISUALCODE\\openCV\\picachu_gray.jpg"
+
 img = cv2.imread(img_file, cv2.IMREAD_GRAYSCALE)
-print(img_file)
-if img is not None:
-    cv2.imshow('IMG', img)
-    cv2.waitKey()
-    cv2.destroyAllWindows()
-else:
-    print('No image file.')
+cv2.imshow(img_file, img)
+cv2.imwrite(save_file, img)
+cv2.waitKey()
+cv2.destroyAllWindows()
