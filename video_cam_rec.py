@@ -5,7 +5,7 @@ if cap.isOpened():
     print("opened")
     file_path = "C:\\Users\\rnltl\\Desktop\\VISUALCODE\\openCV\\record.avi"
     fps = 25.40
-    fourcc = cv2.VideoWriter_fourcc(*'DIVV')
+    fourcc = cv2.VideoWriter_fourcc(*'DIVX')
     width = cap.get(cv2.CAP_PROP_FRAME_WIDTH)
     height = cap.get(cv2.CAP_PROP_FRAME_HEIGHT)
     size = (int(width), int(height))
