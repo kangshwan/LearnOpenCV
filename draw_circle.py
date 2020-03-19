@@ -1,7 +1,7 @@
 import cv2
 import numpy as np
 
-img = cv2.imread('../blank_500.jpg')
+img = cv2.imread('blank_500.jpg')
 #원점 150,150, 반지름 100
 cv2.circle(img, (150, 150), 100, (200, 0, 200), 1, cv2.LINE_AA)
 #원점 300,150, 반지름 70
@@ -31,6 +31,6 @@ cv2.ellipse(img, (350,425), (50, 75), 45, 0, 180, (0, 0, 255), 1, cv2.LINE_AA)
 #원점 400, 425, 반지름 50, 75, 회전 45도 후 위반원
 cv2.ellipse(img, (400, 425), (50, 75), 45, 181, 360, (255, 0, 0), 1, cv2.LINE_AA)
 
-cv2.imshow('Circle', img)
+cv2.imshow('circle', img)
 cv2.waitKey(0)
 cv2.destroyAllWindows()
