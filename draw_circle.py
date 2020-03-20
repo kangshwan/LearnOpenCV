@@ -1,7 +1,7 @@
 import cv2
 import numpy as np
 
-img = cv2.imread('blank_500.jpg')
+img = cv2.imread('./img/blank_500.jpg')
 #원점 150,150, 반지름 100
 cv2.circle(img, (150, 150), 100, (200, 0, 200), 1, cv2.LINE_AA)
 #원점 300,150, 반지름 70
